@@ -24,7 +24,7 @@ Clientes.findAll().then(clientes => {
     Sucursales.findAll().then(sucursales => {
         for (let index = 0; index < 15; index++) {
             Facturas.create({
-                fecha: new Date().toDateString(),
+                fecha: faker.date.between('2019-07-01', '2015-09-01'),
                 clientes_ci_cliente: clientes[faker.random.number({min: 0, max: clientes.length - 1})].dataValues.ci_cliente,
                 sucursales_id_sucursal: sucursales[faker.random.number({min: 0, max: sucursales.length - 1})].dataValues.id_sucursal
             });
