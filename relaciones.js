@@ -22,7 +22,7 @@ Tipos.findAll().then(tipos => {
 
 Clientes.findAll().then(clientes => {
     Sucursales.findAll().then(sucursales => {
-        for (let index = 0; index < 15; index++) {
+        for (let index = 0; index < 100; index++) {
             Facturas.create({
                 fecha: faker.date.between('2019-07-01', '2019-09-01'),
                 clientes_ci_cliente: clientes[faker.random.number({min: 0, max: clientes.length - 1})].dataValues.ci_cliente,

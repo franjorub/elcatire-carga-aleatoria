@@ -13,7 +13,7 @@ const Bebidas = require('./models/bebidas')(sequelize, Sequelize);
 Facturas.findAll().then(facturas => {
     PerrosCalientes.findAll().then( perrosCalientes => {
         Bebidas.findAll().then( bebidas => {
-            for (let index = 0; index < 40; index++) {
+            for (let index = 0; index < 200; index++) {
                 DetalleFactura.create({
                   facturas_id_factura: facturas[faker.random.number({min: 0, max: facturas.length - 1})].dataValues.id_factura,
                   bebidas_id_bebida: bebidas[faker.random.number({min: 0, max: bebidas.length - 1})].dataValues.id_bebida,
