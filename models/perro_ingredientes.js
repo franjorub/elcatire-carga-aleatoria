@@ -25,6 +25,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   }, {
-    tableName: 'perro_ingredientes'
+    tableName: 'perro_ingredientes',
+    timestamps: false,
   });
 };

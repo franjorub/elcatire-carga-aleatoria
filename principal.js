@@ -35,20 +35,20 @@ sequelize
         })    
     }
 
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < 10; index++) {
         Tipos.create({
             nombre: faker.address.country(),
         })
     }
 
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < 10; index++) {
         Bebidas.create({
             nombre: faker.random.word(),
             precio: 10.3
         })
     }
 
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < 25; index++) {
         Ingredientes.create({
             nombre: faker.random.word(),
             cantidad: faker.random.number({ min: 0, max: 999 }),
